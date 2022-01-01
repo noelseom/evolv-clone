@@ -7,7 +7,7 @@ const NavButton = ({ options }) => {
     const { label, path } = options
     
     return (
-        <Link href={'https://google.com'}>
+        <Link href={path}>
             <Container>
                 {label}
             </Container>

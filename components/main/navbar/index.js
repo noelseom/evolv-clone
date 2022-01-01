@@ -7,15 +7,39 @@ import { Container, TopBar, BottomBar } from './style'
 
 const navOptions = [
   {
+    label: "Shop",
+    title: "Evolv Online Store for Climbing and Bouldering Gear",
+    path: "/shop",
+    icon: ''
+  },
+  {
+    label: "Team Evolv",
+    title: "Team Evolv",
+    path: "/team-evolv",
+    icon: ''
+  },
+  {
     label: "Home",
     title: "Rock Climbing and Bouldering Gear",
     path: "/",
     icon: ''
   },
+  // {
+  //   label: "Resole",
+  //   title: "Evolv Pro Shop | Evolv USA",
+  //   path: "https://www.yosemitebum.com/",
+  //   icon: ''
+  // },
   {
-    label: "Team Evolv",
-    title: "Rock Climbing and Bouldering Gear",
-    path: "/teamEvolv",
+    label: "Retail Store",
+    title: "Evolv Pro Shop | Evolv USA",
+    path: "/evolv-pro-shop",
+    icon: ''
+  },
+  {
+    label: "About Us",
+    title: "About Us | Evolv USA",
+    path: "/about-us",
     icon: ''
   }
 ]
@@ -25,7 +49,7 @@ export const NavigationBar = () => {
     
     return (
         <Container>
-            <TopBar>
+            <TopBar>      
             
             </TopBar>
             <BottomBar>

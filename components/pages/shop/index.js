@@ -1,11 +1,11 @@
 import React, { Fragment } from 'react'
 
-const Home = () => {
+const Shop = () => {
     return (
         <>
-            THIS IS THE HOME PAGE
+            THIS IS THE SHOP PAGE
         </>
     )
 }
 
-export default Home
+export default Shop
