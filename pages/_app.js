@@ -18,6 +18,7 @@ const MyApp = ({ Component, pageProps, auth }) => {
             <Head>
                 <title>Stuff</title>
                 <link rel='icon' href='/favicon.ico' />
+                <link href='https://fonts.googleapis.com/css?family=Tangerine|Roboto+Condensed|PT+Sans' rel='stylesheet' />
             </Head>
 
             <NavigationBar />
