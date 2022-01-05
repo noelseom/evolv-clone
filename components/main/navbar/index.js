@@ -24,7 +24,7 @@ const navHome = {
     label: 'Home',
     title: 'Rock Climbing and Bouldering Gear',
     path: '/',
-    icon: '',
+    icon: ''
 }
 
 const navOptionsRight = [
@@ -45,7 +45,7 @@ const navOptionsRight = [
         title: 'About Us | Evolv USA',
         path: '/about-us',
         icon: '',
-    },
+    }
 ]
 
 // is all this stuff even necessary, can i customize it completely for myself
@@ -73,5 +73,3 @@ export const NavigationBar = () => {
 }
 
 export default NavigationBar
-
-//{ navOptions.map( button => <NavButton key={button.path} options={button} />) }

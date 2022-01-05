@@ -1,11 +1,13 @@
 import styled from '@emotion/styled'
+import { navBarHeight } from './utils/constants'
 
 export const SiteContainer = styled.div({
-    minWidth: '100%',
-    minHeight: '100%',
-    borderWidth: .5, 
-    borderColor: 'black',
-    backgroundColor: 'yellow', 
+    display: 'flex',
+    flexDirection: 'row',
+    width: '100vw',
+    justifyContent: 'center', 
+    alignItems: 'center',
     margin: 0,
-    padding: 0
+    marginTop: navBarHeight,
+    padding: 0,
 })  

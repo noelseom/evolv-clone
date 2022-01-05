@@ -1,6 +1,6 @@
 import styled from '@emotion/styled'
 import primStyled from '@emotion/primitives'
-import { navigationMidWidth, siteFontFamily } from '../../../../utils/contants'
+import { navigationMidWidth, siteFontFamily } from '../../../../utils/constants'
 
 export const Container = styled.div({
     display: 'flex',
@@ -25,7 +25,7 @@ export const Container = styled.div({
     borderBottom: '7px solid transparent',
     '&:hover': {
         overflow: 'hidden',
-        borderBottom: '7px solid #5cdc88',
+        borderBottom: '7px solid #5cdc88'
    }
 
     //backgroundColor: 'blue'

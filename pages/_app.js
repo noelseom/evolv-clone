@@ -18,11 +18,12 @@ const MyApp = ({ Component, pageProps, auth }) => {
             <Head>
                 <title>Stuff</title>
                 <link rel='icon' href='/favicon.ico' />
-                <link href='https://fonts.googleapis.com/css?family=Tangerine|Roboto+Condensed|PT+Sans' rel='stylesheet' />
+                <link href='https://fonts.googleapis.com/css?family=Tangerine|Roboto+Condensed|PT+Sans|Cousine' rel='stylesheet' />
             </Head>
 
             <NavigationBar />
             <Component {...pageProps} />
+            <div id="modal-root"></div>
         </>
     )
 }

@@ -1,12 +1,14 @@
 import styled from '@emotion/styled'
-import { navigationMidWidth } from '../../../utils/contants'
+import { navigationMidWidth, navBarHeight } from '../../../utils/constants'
 
 export const Container = styled.div({
+    zIndex: 1,
+    position: 'fixed',
     display: 'flex',
     flexDirection: 'column',
 
     width: '100vw',
-    height: 89
+    height: navBarHeight
     //backgroundColor: 'blue'
 })
 
@@ -30,7 +32,7 @@ export const BottomBar = styled.div({
     height: '60%',
 
     //paddingLeft: '15%',
-
+    backgroundColor: 'white',
     borderBottom: '1px solid gray'
 })
 
