@@ -23,6 +23,26 @@ export const Container = styled.div({
     backgroundColor: 'white'
 })
 
+export const AddedBanner = styled.div({
+    display: 'flex',
+    flexDirection: 'row', 
+    alignItems: 'center',
+    justifyContent: 'center', 
+
+    marginTop: 20, 
+
+    height: 60, 
+    width: '100%',
+
+    fontFamily: siteFontFamily,
+    fontSize: 15,
+    letterSpacing: .5,
+    lineHeight: 1.5,
+    fontWeight: 500,
+
+    backgroundColor: 'lightgrey'
+})
+
 export const HeaderBar = styled.div({
     display: 'flex',
     alignItems: 'center',
@@ -47,7 +67,7 @@ export const CartBar = styled.div({
     justifyContent: 'center', 
 
     marginTop: 20, 
-    maxHeight: 500, 
+    maxHeight: 1000, 
     overflowY: 'auto', 
     width: '100%',
 
@@ -127,4 +147,109 @@ export const DeleteButton = styled.div({
     fontWeight: 600,
 
     // backgroundColor: 'powderblue'
+})
+
+export const SubTotalBar = styled.div({
+    display: 'flex',
+    alignItems: 'center',
+    position: 'relative', 
+
+    height: 50,
+    width: '100%',
+
+    fontFamily: siteFontFamilySecond,
+    fontSize: 17,
+    lineHeight: 1.5,
+    fontWeight: 500,
+
+    // backgroundColor: 'powderblue'
+})
+
+export const SubTotalText = styled.div({
+    marginLeft: 20, 
+
+    fontFamily: siteFontFamilySecond,
+    fontSize: 19,
+    lineHeight: 1.5,
+    letterSpacing: 1,
+    fontWeight: '500',
+})
+
+export const CostWindow = styled.div({
+    display: 'flex',
+    alignItems: 'center',
+
+    position: 'absolute', 
+    top: '20%',
+    right: 20,
+
+    fontFamily: siteFontFamilySecond,
+    fontSize: 19,
+    lineHeight: 1.5,
+    letterSpacing: 1,
+    fontWeight: '500'
+})
+
+export const CheckoutBar = styled.div({
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+
+    marginTop: 20, 
+    // height: 300, 
+    width: '100%', 
+
+    // border: '1px solid black'
+})
+
+export const CheckoutButton = styled.div({
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+
+    height: 60, 
+    width: '95%',
+
+    cursor: 'pointer', 
+
+    fontFamily: siteFontFamilySecond,
+    fontSize: 19,
+    lineHeight: 1.5,
+    letterSpacing: 1,
+    fontWeight: '500',
+    color: 'white',
+
+    backgroundColor: siteGreen,
+
+    '&:hover': {
+        backgroundColor: 'forestgreen'
+    },
+})
+
+export const ViewCartButton = styled.div({
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+
+    marginTop: 20, 
+    height: 60, 
+    width: '95%',
+
+    cursor: 'pointer', 
+
+    fontFamily: siteFontFamilySecond,
+    fontSize: 19,
+    lineHeight: 1.5,
+    letterSpacing: 1,
+    fontWeight: '500',
+    color: 'black',
+
+    boxShadow: 'inset 0 0 0 2px black',
+
+    backgroundColor: 'white',
+
+    '&:hover': {
+        backgroundColor: 'black',
+        color: 'white'
+    },
 })

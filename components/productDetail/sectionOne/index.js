@@ -116,10 +116,7 @@ const DetailOne = ({ gotoModal, setDetailTwoVisible, productDetails, onModal }) 
     const openReviewModal = () => gotoModal(2)
     const openShoppingCart = () => gotoModal(3)
 
-    const addToShoppingCart = () => {
-        console.log({ cost, productUid, chosenSize, chosenQuantity, name })
-        console.log('adding to shopping cart')
-        
+    const addToShoppingCart = () => {        
         let cartObjKey = `${productUid}_${chosenSize}`
 
         let cartObj = {

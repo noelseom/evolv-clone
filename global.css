@@ -1,0 +1,14 @@
+@font-face {
+    font-family: "Grotesque";
+    src: url("/fonts/GrotesqueBoldPro/basis-grotesque-bold-pro.otf");
+}
+
+@font-face {
+    font-family: "Tiempo";
+    src: url("/fonts/TiempoRegular/TiemposText-Regular.otf");
+}
+
+@font-face {
+    font-family: "GrotesqueMono";
+    src: url("/fonts/GrotesqueMono/basis-grotesque-mono-regular.otf");
+}

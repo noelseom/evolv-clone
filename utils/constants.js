@@ -9,6 +9,9 @@ const navBarHeight = 90
 //Ciutadella
 const siteFontFamily = 'PT Sans'
 const siteFontFamilySecond = 'Roboto Condensed'
+const siteFontGrotesque = 'Grotesque'
+const siteFontGrotesqueMono = 'GrotesqueMono'
+const siteFontTiempo = 'Tiempo'
 const siteGreen = '#5cdc88'
 const siteBlue = '#009cde'
 
@@ -38,5 +41,8 @@ export {
     blackStarSvg,
     blackTruckSvg,
     blackCheckSvg,
-    navBarHeight
+    navBarHeight,
+    siteFontGrotesque,
+    siteFontGrotesqueMono,
+    siteFontTiempo
 }
