@@ -1,7 +1,7 @@
 import styled from '@emotion/styled'
 import primStyled from '@emotion/primitives'
 
-import { siteFontFamily, siteFontFamilySecond, siteGreen, siteBlue, siteFontGrotesque } from '../../../utils/constants'
+import { siteFontFamily, siteFontFamilySecond, siteGreen, siteBlue, siteFontGrotesque, siteFontTiempo, siteFontGrotesqueMono } from '../../../utils/constants'
 
 export const Container = styled.div({
     display: 'flex',
@@ -48,7 +48,7 @@ export const TitleBar = styled.div({
     fontSize: 28,
     letterSpacing: 1.5,
     // fontFamily: siteFontGrotesque,
-    fontFamily: siteFontGrotesque,
+    fontFamily: siteFontGrotesqueMono,
     fontWeight: 600
 })
 
