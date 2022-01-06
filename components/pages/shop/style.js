@@ -38,10 +38,8 @@ export const ShopWindow = styled.div({
 // temporary 
 export const FilterBoxContainer = styled.div({
     display: 'flex',
-    // flexDirection: 'row',
+    flexDirection: 'column',
     width: filterBoxWidth,
-    height: 400,
-    backgroundColor: 'darkgrey'
 })
 
 export const ResultsCount = styled.div({
@@ -51,12 +49,14 @@ export const ResultsCount = styled.div({
     alignSelf: 'end',
     justifyContent: 'end',
 
+    marginTop: 5,
+
     fontFamily: siteFontFamily,
     fontSize: 13,
     lineHeight: 1.5,
     fontWeight: 500,
 
-    backgroundColor: 'yellow',
+    // backgroundColor: 'yellow',
 })
 
 export const ProductView = styled.div({

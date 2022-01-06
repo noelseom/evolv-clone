@@ -1,7 +1,8 @@
 import styled from '@emotion/styled'
+import { mainViewWidth } from '../../../utils/constants'
 
 export const Container = styled.div({
-    height: 800, 
-    width: 800, 
+    // minHeight: 800, 
+    width: mainViewWidth, 
     backgroundColor: 'white'
 })

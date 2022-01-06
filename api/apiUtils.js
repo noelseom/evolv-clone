@@ -20,8 +20,6 @@ export const setOptions = (method, data) => ({
 export const sendApiCall = async(options, route) => {
     const serverRoute = serverUrl + route
 
-    // console.log(`trying ${serverRoute}`)
-
     try {
         const res = await fetch(serverRoute, options)
         const data = await res.json()

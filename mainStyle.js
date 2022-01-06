@@ -9,5 +9,5 @@ export const SiteContainer = styled.div({
     alignItems: 'center',
     margin: 0,
     marginTop: navBarHeight,
-    padding: 0,
+    padding: 0
 })  

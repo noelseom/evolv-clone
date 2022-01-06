@@ -9,4 +9,13 @@ const fadeIn = keyframes`
     }
 `
 
-export { fadeIn }
+const slideLeft = keyframes`
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(0%);
+    }
+`
+
+export { fadeIn, slideLeft }

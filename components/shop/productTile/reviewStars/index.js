@@ -1,21 +1,20 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { blackStarSvg, whiteStarSvg } from '../../../../utils/constants'
 
-import { Container, StarImage } from './style'
+import { Container, ReviewCountDiv, StarImage } from './style'
 
-const ReviewStars = ({ reviewScores }) => {
+const ReviewStars = ({ stars, reviewCount, setIsVisible }) => {
 
-    const reviewScoreAvg = 4
-    const reviewCountString = `(0)`
+    const reviewCountString = `(${reviewCount})`
 
+    useEffect(() => {
+        setIsVisible(true)
+    }, [])
 
     return (
         <Container>
-            <StarImage source={{ uri: whiteStarSvg }} />
-            <StarImage source={{ uri: whiteStarSvg }} />
-            <StarImage source={{ uri: whiteStarSvg }} />
-            <StarImage source={{ uri: whiteStarSvg }} />
-            <StarImage source={{ uri: whiteStarSvg }} />
+           {stars.map((star, i) => (star === 1) ? <StarImage key={i} source={{ uri: blackStarSvg }} /> : <StarImage key={i} source={{ uri: whiteStarSvg }} />)}
+           {reviewCountString}
 
         </Container>
     )

@@ -51,9 +51,10 @@ export const ProductName = styled.div({
     textAlign: 'center',
     // backgroundColor: 'powderblue',
 
-    fontFamily: siteFontFamily,
+    fontFamily: 'Roboto Condensed',
     fontSize: 17,
     lineHeight: 1.5,
+    letterSpacing: 1,
     fontWeight: 600
 })
 
@@ -62,9 +63,10 @@ export const ProductCost = styled.div({
     top: 10, 
     left: 10,
 
-    fontFamily: siteFontFamily,
-    fontSize: 16,
+    fontFamily: 'Roboto Condensed',
+    fontSize: 14,
     lineHeight: 1.5,
+    letterSpacing: .5,
     fontWeight: 600
 })
 

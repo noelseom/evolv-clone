@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { useRouter } from 'next/router'
+import Router from 'next/router'
 import {
     Container,
     ProductImage,
@@ -16,17 +16,17 @@ import ReviewStars from './reviewStars'
 import { heartWhiteSvg, heartBlackSvg } from '../../../utils/constants'
 
 const ProductTile = ({ product }) => {
-    const router = useRouter()
 
     const [hovering, setHovering] = useState(false)
     const [productNameColor, setProductNameColor] = useState('black')
+    const [isVisible, setIsVisible] = useState(false)
 
     // modal states
     const [showModal, setShowModal] = useState(false)
     const [modalType, setModalType] = useState(0) //0 - wishlist, 1 - quickview
     const [modalClicked, setModalClicked] = useState(false)
 
-    const { id, cost, description, imageUrl, itemNumber, name } = product
+    const { id, cost, description, imageUrl, productUid, name, stars, reviewCount } = product
 
     const heartUrl = heartWhiteSvg // : heartBlackSvg
     const costString = String(cost).includes('.') ? `$${cost}` : `$${cost}.00`
@@ -34,7 +34,10 @@ const ProductTile = ({ product }) => {
     const gotoProductDetail = (e) => {
         if (!modalClicked) {
             // replace with item number
-            router.push(`/shop/product?productId=${id}`)
+            Router.push({
+                pathname: `/shop/product`,
+                query: {productId: productUid}
+            })
         } else {
             setModalClicked(false)
             setHovering(false)
@@ -69,9 +72,15 @@ const ProductTile = ({ product }) => {
     }
 
     const hideModal = () => setShowModal(false)
+    
+    const gotoModal = () => {
+        setModalClicked(true)
+        setModalType(3)
+        setShowModal(true)
+    }
 
     return (
-        <Container
+        <Container style={{ display: (isVisible) ? 'flex' : 'none'}}
             onMouseEnter={startHovering}
             onMouseLeave={stopHovering}
             onClick={gotoProductDetail}
@@ -87,8 +96,8 @@ const ProductTile = ({ product }) => {
                 <QuickView onClick={openQuickViewModal}>QUICK VIEW</QuickView>
             </QuickViewBox>}
             <ProductName style={{ color: productNameColor }}>{name}</ProductName>
-            <ReviewStars />
-            <Modal show={showModal} hideModal={hideModal} modalType={modalType} />
+            <ReviewStars stars={stars} reviewCount={reviewCount} setIsVisible={setIsVisible} />
+            <Modal gotoModal={gotoModal} show={showModal} hideModal={hideModal} modalType={modalType} productUid={productUid} />
         </Container>
     )
 }

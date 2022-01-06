@@ -3,17 +3,19 @@ import ReactDOM from 'react-dom'
 
 import HeartModal from './heartModal'
 import QuickViewModal from './quickViewModal'
+import ReviewModal from './reviewModal'
+import ShoppingCartModal from './shoppingCartModal'
 
 import { ModalOverlay } from './style'
 
-const Modal = ({ show, hideModal, modalType }) => {
+const Modal = ({ show, hideModal, gotoModal, modalType, productUid }) => {
     const [isBrowser, setIsBrowser] = useState(false)
 
     useEffect(() => {
         setIsBrowser(true)
-        const handleEsc = (event) => {
+        const handleEsc = (e) => {
             //escape key
-            if (event.keyCode === 27) hideModal()
+            if (e.keyCode === 27) hideModal()
         }
 
          window.addEventListener('keydown', handleEsc);
@@ -23,7 +25,9 @@ const Modal = ({ show, hideModal, modalType }) => {
          };
     }, [])
 
-    const InnerModal = modalType === 0 ? <HeartModal /> : <QuickViewModal />
+    const InnerModal = modalType === 0 ? <HeartModal /> : 
+        modalType === 1 ? <QuickViewModal productUid={productUid} gotoModal={gotoModal}/> : 
+        modalType === 2 ? <ReviewModal productUid={productUid} /> : <ShoppingCartModal />
 
     const modal = show ? <ModalOverlay onClick={hideModal}>{InnerModal}</ModalOverlay> : null
 

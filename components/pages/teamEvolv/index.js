@@ -1,10 +1,11 @@
 import React, { Fragment } from 'react'
+import { SiteContainer } from '../../../mainStyle'
 
 const TeamEvolv = () => {
     return (
-        <Fragment>
+        <SiteContainer>
             THIS IS THE TEAM EVOLV PAGE
-        </Fragment>
+        </SiteContainer>
     )
 }
 

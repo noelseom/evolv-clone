@@ -1,15 +1,32 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
+
+import { _getProductDetails } from '../../../api/productsAPI'
+
+import DetailOne from '../../productDetail/sectionOne'
+
 import { Container } from './style'
 
-const QuickViewModal = () => {
+const QuickViewModal = ({ productUid, gotoModal }) => {
+    const [productDetails, setProductDetails] = useState({})
+    const [detailOneVisible, setDetailOneVisible] = useState(false)
 
     const modalStuff = (e) => {
         e.stopPropagation()
     }
 
+    useEffect(() => {
+        const getProductDetails = async() => {
+            const { product } = await _getProductDetails(productUid)
+            setProductDetails({...product})
+            setDetailOneVisible(true)
+        }
+
+        getProductDetails()
+    },[])
+
     return (
         <Container onClick={modalStuff}>
-            THIS IS THE QuickView MODAL
+            {detailOneVisible && <DetailOne gotoModal={gotoModal} productDetails={productDetails} onModal={true}/>}
         </Container>
     )
 }
