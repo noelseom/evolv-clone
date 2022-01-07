@@ -2,7 +2,7 @@ import styled from '@emotion/styled'
 import { navigationMidWidth, navBarHeight } from '../../../utils/constants'
 
 export const Container = styled.div({
-    zIndex: 1,
+    zIndex: 10,
     position: 'fixed',
     display: 'flex',
     flexDirection: 'column',
@@ -16,10 +16,21 @@ export const TopBar = styled.div({
     display: 'flex',
     flexDirection: 'row',
     alignItems: 'center',
+    justifyContent: 'center', 
 
     width: '100%',
     height: '40%',
     backgroundColor: 'black'
+})
+
+export const TopBarText = styled.div({
+    fontSize: 15,
+    // fontFamily: siteFontGrotesque,
+    // fontWeight: 600,
+    color: 'white',
+
+    marginLeft: 10, 
+    marginRight: 10
 })
 
 export const BottomBar = styled.div({

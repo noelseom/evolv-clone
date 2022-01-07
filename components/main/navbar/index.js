@@ -1,9 +1,11 @@
 import React from 'react'
 import { Nav, Navbar, Form, FormControl } from 'react-bootstrap'
 
+import { siteFontGrotesque, siteFontGrotesqueMono, siteFontTiempo } from '../../../utils/constants'
+
 import NavButton from '../subs/navButton'
 
-import { Container, TopBar, BottomBar, BottomBarLeft, BottomBarRight, BottomBarMid } from './style'
+import { Container, TopBar, TopBarText, BottomBar, BottomBarLeft, BottomBarRight, BottomBarMid } from './style'
 
 const navOptionsLeft = [
     {
@@ -52,7 +54,11 @@ const navOptionsRight = [
 export const NavigationBar = () => {
     return (
         <Container>
-            <TopBar></TopBar>
+            <TopBar>
+                <TopBarText style={{ fontFamily: siteFontGrotesqueMono }}>*****THIS IS NOT AN EVOLV SITE*****</TopBarText>
+                <TopBarText style={{ fontFamily: siteFontGrotesque }}>*****THIS IS NOT AN EVOLV SITE*****</TopBarText>
+                <TopBarText style={{ fontFamily: siteFontTiempo }}>*****THIS IS NOT AN EVOLV SITE*****</TopBarText>
+            </TopBar>
             <BottomBar>
                 <BottomBarLeft>
                     {navOptionsLeft.map((button) => (

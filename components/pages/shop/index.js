@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react'
+import { useRouter } from 'next/router'
 
 import { _getProducts } from '../../../api/productsAPI'
 
@@ -41,9 +42,12 @@ const defaultFilters = {
 import { shopBlurb } from '../../../utils/blurbConstants'
 
 const Shop = () => {
+    const router = useRouter()
+
     const [products, setProducts] = useState([])
     const [allProducts, setAllProducts] = useState([])
     const [filters, setFilters] = useState(defaultFilters)
+    const [initialFilter, setInitialFilter] = useState(false)
 
     const productsRef = useRef({})
     const allProductsRef = useRef({})
@@ -51,12 +55,41 @@ const Shop = () => {
     productsRef.current = products
     allProductsRef.current = allProducts
 
+    const checkInitialFilter = (productsData) => {
+        // if there is a param in log, use that param just once
+        const path = router.asPath
+        if ( path.includes('?')) {
+            const param = path.split('?')[1].split('=')[0]
+            const value = path.split('?')[1].split('=')[1] ?? ''
+
+            let tempProducts = [...productsData]
+
+            if (param === 'name') {    
+                tempProducts = tempProducts.filter(product => product.name.includes(value))
+            }
+            else if (param === 'closeout') {
+                tempProducts.sort((a, b) => a.cost - b.cost)
+                
+            }
+            else if (param === 'climbingshoes') {
+                tempProducts = tempProducts.filter(product => product.categories.includes('climbing_shoes'))
+            }
+            else if (param === 'climbingaccessories') {
+                tempProducts = tempProducts.filter(product => product.categories.includes('climbing_accessories'))
+            }
+
+            setProducts([...tempProducts])
+            setInitialFilter(true)
+        }
+    }
+
     const getProducts = async () => {
         const { products: productsData } = await _getProducts()
         
         // enables front end filtering
         setAllProducts([...productsData])
         setProducts([...productsData])
+        if (!initialFilter) checkInitialFilter(productsData)
     }
 
     const filterProducts = (filterKey) => {
@@ -85,7 +118,7 @@ const Shop = () => {
         setFilters(tempFilterObj)
     }
 
-    const sortProducts = (sortValue) => { //1 - Maximum Price, 2 - Min, 3 - Name
+    const sortProducts = (sortValue) => {
         setAllProducts(allProductsRef.current)
         setProducts(productsRef.current)
 

@@ -3,6 +3,7 @@ import Head from 'next/head'
 import { Global } from '@emotion/react'
 import NavigationBar from '../components/main/navbar'
 import '../global.css'
+import 'bootstrap/dist/css/bootstrap.css'
 
 const MyApp = ({ Component, pageProps, auth }) => {
     return (

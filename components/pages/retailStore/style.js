@@ -39,11 +39,65 @@ export const CarouselContainer = styled.div({
     alignItems: 'center',
     justifyContent: 'center',
 
+    cursor: 'hover',
+    animated: 'false', 
+
     marginTop: 20,
     width: '100%',
     height: 800,
 
-    // border: '1px solid black'
+    // border: '10px solid black'
+})
+
+export const CustomInsider = styled.div({
+    height: '20%',
+    width: '20%',
+    zIndex: 1,
+    // border: '3px solid black', 
+    backgroundColor: 'blue'
+})
+
+export const CustomImg = styled.img({
+    height: '100%',
+    width: '100%',
+})
+
+export const CarouselWindow = styled.div({
+    height: 800,
+    width: '100%',
+
+    position: 'relative',
+
+    // border: '10px solid blue', 
+
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+
+    backgroundSize: 'contain',
+    backgroundRepeat: 'no-repeat'
+})
+
+export const CarouselButton = styled.div({
+    display: 'flex',
+    alignItems: 'center', 
+    justifyContent: 'center',
+
+    cursor: 'pointer', 
+
+    height: 35, 
+    width: 250,
+
+    position: 'absolute',
+    bottom: '10%', 
+    right: '40%',
+
+    fontSize: 16,
+    fontFamily: siteFontGrotesqueMono,
+    fontWeight: 500,
+    whiteSpace: 'pre-wrap',
+
+    backgroundColor: 'white'
 })
 
 export const SubtitleContainer = styled.div({

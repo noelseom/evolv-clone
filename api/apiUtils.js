@@ -1,6 +1,6 @@
 /* eslint-disable */
 
-let serverUrl = 'http://localhost:3003'
+let serverUrl = 'http://ec2-18-221-219-192.us-east-2.compute.amazonaws.com:3003'
 let userId = ''
 
 // const setHeaders = () => {

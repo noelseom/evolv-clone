@@ -12,3 +12,30 @@
     font-family: "GrotesqueMono";
     src: url("/fonts/GrotesqueMono/basis-grotesque-mono-regular-pro.otf");
 }
+
+.shoesliderleft {
+    animation: slideLeftPlease .2s; 
+}
+
+.shoessliderright {
+    animation: slideRightPlease .2s; 
+}
+
+
+@keyframes slideLeftPlease {
+    from {
+        transform: translateX(0%);
+    }
+    to {
+        transform: translateX(16.66666666%);
+    }
+}
+
+@keyframes slideRightPlease {
+    from {
+        transform: translateX(0%);
+    }
+    to {
+        transform: translateX(-16.66666666%);
+    }
+}
