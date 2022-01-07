@@ -1,12 +1,13 @@
 import React, { Fragment, useState } from 'react'
 import Link from 'next/link'
 
-import { Container, CenterContainer, Logo } from './style'
+import { Container, CenterContainer, Logo, InnerA } from './style'
 
 const NavButton = ({ isHome, options }) => {
     const { label, path } = options
 
-    const NavInnerButtonText = <Container>{label}</Container>
+    const NavInnerButtonText = (label === 'RESOLE') ? <InnerA><Container>{label}</Container></InnerA> :
+        <Container>{label}</Container>
     const NavInnerButtonLogo = (
         <CenterContainer>
             <Logo
@@ -19,7 +20,7 @@ const NavButton = ({ isHome, options }) => {
 
     const NavInnerButton = isHome ? NavInnerButtonLogo : NavInnerButtonText
 
-    return <Link href={path}>{NavInnerButton}</Link>
+    return (label === 'RESOLE') ? <InnerA target='_blank' href={path}><Container>{label}</Container></InnerA> :  <Link href={path}>{NavInnerButton}</Link>
 }
 
 export default NavButton

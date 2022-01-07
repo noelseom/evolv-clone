@@ -48,7 +48,7 @@ export const TitleBar = styled.div({
     fontSize: 28,
     letterSpacing: 1.5,
     // fontFamily: siteFontGrotesque,
-    fontFamily: siteFontGrotesqueMono,
+    fontFamily: siteFontFamilySecond,
     fontWeight: 600
 })
 

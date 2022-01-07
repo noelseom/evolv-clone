@@ -28,12 +28,12 @@ const navHome = {
 }
 
 const navOptionsRight = [
-    // {
-    //   label: "Resole",
-    //   title: "Evolv Pro Shop | Evolv USA",
-    //   path: "https://www.yosemitebum.com/",
-    //   icon: ''
-    // },
+    {
+      label: 'RESOLE',
+      title: "Evolv Pro Shop | Evolv USA",
+      path: "https://www.yosemitebum.com/",
+      icon: ''
+    },
     {
         label: 'RETAIL STORE',
         title: 'Evolv Pro Shop | Evolv USA',

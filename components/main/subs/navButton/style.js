@@ -45,6 +45,11 @@ export const CenterContainer = styled.div({
     cursor: 'pointer',
 })
 
+export const InnerA = styled.a({
+    color: 'black',
+    textDecorationLine: 'none',
+})
+
 export const Logo = primStyled.Image({
     height: '60%',
     width: '100%',
