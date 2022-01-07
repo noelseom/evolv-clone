@@ -43,7 +43,6 @@ Browse through the team menus and learn about who we are, where we come from, an
 
 Check out the Blog to see everything from epic adventures, to life lessons on the wall, and even what our team members get up to in their spare time.`
 
-
 const proBlurb = `This is a pro description where the bio talks about how the pro began climbing in 1997 and has been a prominent force in the climbing community for the last decade.
 
 Growing up in the competition scene, this pro has consistently been a member of the US Team since 2001, winning this pro's first Youth Climbing National Championship at age twelve (2002), Adult National Championship at age thirteen (2003), and won a silver medal at the Youth World Championships in Scotland at age fourteen (2004).
@@ -54,7 +53,6 @@ Since then, this pro has shifted this pro's focus away from competitions and hon
 
 In 2014 this pro relocated to Las Vegas, NV, an area with unlimited climbing, and potential for new development. In Red Rock, this pro has already contributed to the establishment of more world class climbing with this pro's first ascents of Critically Acclaimed, a stunning V9/10 highball, and most recently, The Swoop V10, a dynamic problem over a sketchy landing.`
 
-
 const accomplishmentsBlurb = `Horizon V15 (1st female and youngest person to climb v15)
 Golden Shadow V14 (2nd female to climb v14)
 Ciudad de Dios (5.14d/5.15a)
@@ -62,4 +60,15 @@ Power of Silence V10 (at age 8, the youngest person to climb this grade)
 2x youth bouldering world champion
 2x youth lead climbing world champion`
 
-export { accomplishmentsBlurb, shopBlurb, descriptionBlurb, teamEvolvBlurb, descriptionFeaturesBlurb, specificationsBlurb, shippingBlurb, paymentBlurb, proBlurb}
+
+export {
+    accomplishmentsBlurb,
+    shopBlurb,
+    descriptionBlurb,
+    teamEvolvBlurb,
+    descriptionFeaturesBlurb,
+    specificationsBlurb,
+    shippingBlurb,
+    paymentBlurb,
+    proBlurb,
+}

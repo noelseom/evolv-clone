@@ -9,7 +9,7 @@ const HeartModal = () => {
 
     return (
         <Container onClick={modalStuff}>
-            THIS IS THE WISHLIST MODAL
+            THIS IS THE WISHLIST MODAL... I DON'T UNDERSTAND WHAT THIS DOES ON THE EVOLV SITE
         </Container>
     )
 }

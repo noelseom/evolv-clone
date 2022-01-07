@@ -1,7 +1,11 @@
 import styled from '@emotion/styled'
 
 export const Container = styled.div({
-    height: 800, 
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+
+    height: 500, 
     width: 800, 
     backgroundColor: 'white'
 })
