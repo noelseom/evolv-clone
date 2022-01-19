@@ -205,7 +205,7 @@ export const SizeQuantityBar = styled.div({
 
 export const SizeQuantitySelect = styled.select({
     height: '100%',
-    width: 100,
+    width: 150,
 
     fontFamily: siteFontFamilySecond,
     fontSize: 12,

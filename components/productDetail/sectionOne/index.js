@@ -72,6 +72,7 @@ const DetailOne = ({ gotoModal, setDetailTwoVisible, productDetails, onModal }) 
 
     const setSizeQuantityDropdown = (size) => {
         const { sizeCounts } = productDetails
+        // console.log({ sizeCounts })
         let quantity = 0
 
         if (sizeCounts.length === 0) quantity = Math.floor(Math.random() * 20 + 1)
@@ -97,11 +98,20 @@ const DetailOne = ({ gotoModal, setDetailTwoVisible, productDetails, onModal }) 
         if (sizeCounts.length === 0) {
             tempSizes = ['UNI']
         } else {
-            tempSizes = sizeCounts.map((x) => x.size)
+            tempSizes = sizeCounts.map((x) => {
+                let sizeSlot = {
+                    size: x.size, 
+                    sizeText: `${x.size} Boys = ${x.size+1} Women`
+                }
+
+                return sizeSlot
+            })
         }
 
+        console.log({ tempSizes })
+
         setSizes([...tempSizes])
-        setSizeQuantityDropdown(tempSizes[0])
+        setSizeQuantityDropdown(tempSizes[0].size)
         setChosenSize(tempSizes[0])
     }
 
@@ -163,6 +173,8 @@ const DetailOne = ({ gotoModal, setDetailTwoVisible, productDetails, onModal }) 
 
     const sizeChange = ({ target }) => {
         const targetSize = parseFloat(target.value)
+        const targetKey = target.text
+        console.log({ targetSize, targetKey })
         setSizeQuantityDropdown(targetSize)
         setChosenSize(targetSize)
     }
@@ -212,8 +224,8 @@ const DetailOne = ({ gotoModal, setDetailTwoVisible, productDetails, onModal }) 
                         <SizeQuantityBar>
                             Size:{' '}
                             <SizeQuantitySelect onChange={(e) => sizeChange(e)}>
-                                {sizes.map((size, index) => (
-                                    <SizeQuantityOption key={index}>{size}</SizeQuantityOption>
+                                {sizes.map((slot, index) => (
+                                    <SizeQuantityOption key={index} value={slot.size}>{slot.sizeText}</SizeQuantityOption>
                                 ))}
                             </SizeQuantitySelect>
                             Quantity:{' '}
