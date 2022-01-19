@@ -96,7 +96,7 @@ const DetailOne = ({ gotoModal, setDetailTwoVisible, productDetails, onModal }) 
         const tempSizes = []
 
         if (sizeCounts.length === 0) {
-            tempSizes = ['UNI']
+            tempSizes = [{size: 'UNI', sizeText: 'UNI'}]
         } else {
             tempSizes = sizeCounts.map((x) => {
                 let sizeSlot = {
