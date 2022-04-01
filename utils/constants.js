@@ -67,7 +67,7 @@ const pros = [
     {
         id: 8, 
         name: "KAI LIGHTNER",
-        imageUrl: "http://blog.momentumclimbing.com/wp-content/uploads/2014/08/4N5B5954-2.jpg"
+        imageUrl: "https://media-cldnry.s-nbcnews.com/image/upload/newscms/2016_04/1396116/kai_lightner_michael_lim_photography-10.jpg"
     },
     {
         id: 9, 
