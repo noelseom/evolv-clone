@@ -163,7 +163,7 @@ export const BigBannerInner = styled.div({
     alignItems: 'center', 
 
     // marginTop: '70%'
-    marginTop: '25%', 
+    marginTop: '45vh', 
     height: '20%',
     width: '40%',
 
@@ -174,5 +174,5 @@ export const BigBannerInner = styled.div({
     whiteSpace: 'pre-wrap',
     color: 'white',
 
-    // backgroundColor: 'yellow'
+    // border: '1px solid blue'
 })
